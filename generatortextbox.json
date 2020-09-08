@@ -1,0 +1,9 @@
+(function(trigger, menu) {
+  /** toggle menu class name on click */
+  function fn(event) {
+    if (event.target.id === trigger.id || event.target.parentElement.id === trigger.id) {
+      menu.classList.remove('hidden');
+    }
+  }
+  document.addEventListener('click', fn, false);
+}(document.querySelector('#nav-trigger'), document.querySelector('#nav-mobile')));
